@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- icon credits link -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <!-- CDN -->
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+      integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    
+    <!-- animate css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <title>BLOOD BUCKET</title>
+  </head>
+
+  <body onload="loader();">
+    <div>
+      <img
+        src="./img/blood.png"
+        class="loader animated infinite delay-1s fadeInDown fadeOutDown"
+        id="loader"
+      />
+    </div>
+    <div id="body">
+
+        <!-- navbar -->
+        
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                <a href="#" class="navbar-brand ml-5 text-light">BLOOD BUCKET</a>
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-light">Home <span class="sr-only">(current)</span></a>    
+                    </li>
+                    <li class="nav-item ml-5">
+                        <a class="nav-link text-light" href="#">About</a>
+                      </li>
+                      <li class="nav-item ml-5">
+                        <a class="nav-link text-light" href="#">Services</a>
+                      </li>
+                    <li class="nav-item ml-5">
+                        <a class="nav-link text-light" href="#">Login</a>
+                      </li>
+                      <li class="nav-item ml-5">
+                        <a class="nav-link text-light" href="#">Signup</a>
+                      </li>
+                      <li class="nav-item ml-5">
+                        <a class="nav-link text-light" href="#">Contact</a>
+                      </li>
+                    </ul>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- background home image -->
+        
+        <div class="home-image">
+            <div class="image-overlay">
+                <h1 class="text-light bg-header1">- SAVE LIVES -</h1>
+                <h1 class="bg-header2">donate blood</h1>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Resource jQuery -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+      integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      let loader = () => {
+        setTimeout(() => {
+          document.getElementById('loader').style.display = 'none';
+          document.getElementById('body').style.display = 'block';
+        }, 3500);
+      };
+    </script>
+  </body>
+</html>
