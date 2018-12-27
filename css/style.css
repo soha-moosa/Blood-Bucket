@@ -113,6 +113,15 @@ ul.navbar-nav a:hover {
   section#about h1 {
     font-size: 20px;
   }
+
+  section#about h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  section#services h1 {
+    font-size: 20px;
+  }
 }
 
 /***** Media size 401 *****/
@@ -158,6 +167,15 @@ ul.navbar-nav a:hover {
   }
 
   section#about h1 {
+    font-size: 20px;
+  }
+
+  section#about h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  section#services h1 {
     font-size: 20px;
   }
 }
