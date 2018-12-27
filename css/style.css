@@ -68,6 +68,33 @@ ul.navbar-nav a:hover {
   color: #dc143c !important;
 }
 
+#team {
+  background-color: #424242;
+}
+
+.profile-style {
+  border: 5px solid #dc143c;
+  border-radius: 50%;
+}
+
+.linkedIn {
+  position: absolute;
+  left: 95px;
+}
+
+.github {
+  position: absolute;
+  left: 120px;
+}
+
+.developer-heading {
+  line-height: 58px;
+}
+
+.blood-color {
+  color: #dc143c;
+}
+
 /***** Media size 321 *****/
 
 @media screen and (min-width: 320px) and (max-width: 400px) {
