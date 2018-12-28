@@ -1,3 +1,6 @@
 .center{
     display: flex; justify-content: center;
 }
+.shadow{
+    box-shadow: 0px 0px 3px #848484;/*for shadow efect around the box*/
+}  
