@@ -80,16 +80,6 @@ ul.navbar-nav a:hover {
   border-radius: 50%;
 }
 
-/* .linkedIn {
-  position: absolute;
-  left: 95px;
-}
-
-.github {
-  position: absolute;
-  left: 120px;
-} */
-
 .developer-heading {
   line-height: 58px;
 }
@@ -97,6 +87,38 @@ ul.navbar-nav a:hover {
 .blood-color {
   color: #dc143c;
 }
+
+::placeholder {
+  color: #dc143c;
+}
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #dc143c !important;
+}
+
+input:focus,
+textarea:focus {
+  outline-color: #dc143c !important;
+}
+
+/*::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+/* /  text-align: center; */
+
+/*  */
+/* ::-moz-placeholder { */
+/* Firefox 19+ */
+/* text-align: center; */
+/* } */
+
+/* :-ms-input-placeholder { */
+/* text-align: center; */
+/* } */
 
 /***** Media size 321 *****/
 
