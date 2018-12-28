@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/dashborad.css" />
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <title>dashboard</title>
 </head>
+
 <body>
-    
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar">
+            <a href="#" class="navbar-brand ml-5 text-light">BLOOD BUCKET</a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ml-5">
+                    <a href="#home" class="nav-link text-light">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ml-5">
+                    <a class="nav-link text-light" href="#about">About</a>
+                </li>
+                <li class="nav-item ml-5">
+                    <a class="nav-link text-light" href="#services">Services</a>
+                </li>
+                <li class="nav-item ml-5">
+                    <a class="nav-link text-light" href="#team">Team</a>
+                </li>
+                <li class="nav-item ml-5">
+                    <a class="nav-link text-light" href="#">Login</a>
+                </li>
+                <li class="nav-item ml-5">
+                    <a class="nav-link text-light" href="#">Signup</a>
+                </li>
+                <li class="nav-item ml-5">
+                    <a class="nav-link text-light" href="#">Contact</a>
+                </li>
+            </ul>
+            </ul>
+        </div>
+    </nav>
+    <div class="container center">
+        <div class="card-deck" style="width:50%">
+            <div class="card" style="width:20%">
+                <img class="card-img-top" src="../img/donor.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Become a Donor</h5>
+                    <p class="card-text">Register your self as a blood donor to save the lives in need</p>
+                </div>
+                <button type="button" class="btn btn-dark">Use as Donor</button>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="../img/donor.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Become a Donor</h5>
+                    <p class="card-text">Register your self as a blood donor to save the lives in need</p>
+                </div>
+                <button type="button" class="btn btn-dark">Use as Donor</button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
