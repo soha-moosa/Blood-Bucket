@@ -36,7 +36,7 @@
         </div>
     </nav>
     <div class="container p-2" style="margin-top:2%">
-        <form action="">
+        <form action="javascript:void(0);" onsubmit="check();">
             <h2>Before you register as a blood donor</h2>
             <p>Most people can give blood but sometimes it is not possible to be a blood donor.</p>
             <p> Please answer all of the following five questions so that we can advise if blood donation is
@@ -45,41 +45,49 @@
                 Your responses are not recorded in any way.</p>
             <p style="font-weight:bold">1. Are you 17 – 65 years old?</p>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
+                <input required class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1"
+                    value="yes">
                 <label class="form-check-label" for="inlineRadio1">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
+                <input required class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2"
+                    value="no">
                 <label class="form-check-label" for="inlineRadio2">No</label>
             </div>
             <p style="font-weight:bold">2. Do you currently weigh less than 50kg (7 stone 12 pounds)?</p>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option3">
+                <input required class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3"
+                    value="option3">
                 <label class="form-check-label" for="inlineRadio3">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option4">
+                <input required class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4"
+                    value="option4">
                 <label class="form-check-label" for="inlineRadio4">No</label>
             </div>
             <p style="font-weight:bold">3.Have you had a blood or blood product transfusion since 1st January 1980?</p>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Yes</label>
+                <input required class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio5">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input required class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio6">No</label>
             </div>
             <p style="font-weight:bold">4. Have you ever had a cancer other than basal cell carcinoma or cervical
                 carcinoma
                 insitu (CIN)?</p>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Yes</label>
+                <input required class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio7"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio7">Yes</label>
             </div>
             <div class="form-check form-check-inline">
-                <input required class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">No</label>
+                <input required class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio8"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio8">No</label>
             </div>
             <div class="" style="margin-top:5%;">
                 <button type="submit" class="btn btn-danger">Continue</button>
@@ -90,6 +98,18 @@
 
 </html>
 <script>
+    function check() {
+        var op1 = document.getElementById("inlineRadio1").checked; //Yes
+        var op2 = document.getElementById("inlineRadio4").checked; //No
+        var op3 = document.getElementById("inlineRadio6").checked; //No
+        var op4 = document.getElementById("inlineRadio8").checked; //No
+
+        if (op1 & op2 & op3 & op4 === true) {
+            alert("Congratulations! You are eleigible to donate blood and can proceed further</br> <button>Hello</button>");
+        } else {
+            alert("Thank you. Based on the answers you provided, we advise that you do not register to be a blood donor.");
+        }
+    }
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
