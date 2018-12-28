@@ -14,6 +14,10 @@ body {
   border-bottom: 3px solid #dc143c;
 }
 
+.background-color {
+  background-color: #dc143c;
+}
+
 #loader {
   height: 270px;
   width: 270px;
@@ -100,6 +104,14 @@ textarea {
 input:focus,
 textarea:focus {
   outline-color: #dc143c !important;
+}
+
+.footer-copyright {
+  line-height: 502%;
+}
+
+.drop-footer-icon {
+  font-size: 231%;
 }
 
 /***** Media size 321 *****/
