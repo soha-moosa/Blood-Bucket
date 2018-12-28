@@ -30,7 +30,7 @@
     <title>BLOOD BUCKET</title>
   </head>
 
-  <body onload="loader();">
+  <body onload="loader();" >
     <div>
       <img
         src="./img/blood.png"
@@ -42,7 +42,7 @@
 
         <!-- navbar -->
         
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -77,80 +77,125 @@
         
         <!-- Home section -->
 
-        <section id="home">
+      <section id="home mt-5">
         <div class="home-image">
             <div class="image-overlay">
-                <h1 class="text-light bg-header1">- SAVE LIVES -</h1>
-                <h1 class="bg-header2">donate blood</h1>
+                <div class="container">
+                  <div class="row text-highlight justify-content-center">
+                    <div class="col-md-10 text-center">
+                        <h1 class="text-light bg-header1">- SAVE LIVES -</h1>
+                        <h1 class="bg-header2">donate blood</h1>
+                        <button class="btn btn-danger btn-lg mt-3 p-3">Get Started</button>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
       </section>
 
         <!-- About section -->
 
-        <section id="about">
-
-            <div class="container text-justify">
-              <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-6">
-                    <br>
+        <section id="about" class="p-5 bg-dark text-white">
+            <div class="container text-center">
+              <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-10 col-lg-12">
                     <h1 class="text-center">ABOUT BLOOD BUCKET</h1>
                     <h2>Who Are We ?</h2>
                     <p>Blood Bucket is Pakistan’s top Blood donating web app which provides an ultimate solution in any kind of emergency or disastrous situations in the country, available 24/7 for everyone, anywhere !</p>
-                    <h2>Our Goal</h2>
-                    <p>Our goal for this application is to provide an easy access to blood donors locating at different regions of the country and save the lives in need from any kind of mishaps or emergencies.</p>
                 </div>
               </div>
               </div>
         </section>
-        <!-- Services section -->
-
-        <section id="services">
-            <div class="container text-justify">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-6">
-                      <br>
-                      <h1 class="text-center">Services</h1>
-                      <p>The main purpose of this application is to connect the donors and patients directly in an interactive way.</p>
-                      <p>You can either sign up as a donor or as a patient.</p>
-                      <p>The patient portal gets access to all the available donors, you can search the donors by their blood group and then contact them directly for further details, or you can either register yourself as a donor by providing your required medical information.</p>
+        <section class="p-5 bg-danger text-white">
+          <div class="container text-center">
+              <div class="row justify-content-center">
+                  <div class="col-sm-12 col-md-10 col-lg-12">
+                      <h2>Our Goal</h2>
+                      <blockquote class="qoute">
+                        Our goal for this application is to provide an easy access to blood donors locating at different regions of the country and save the lives in need from any kind of mishaps or emergencies.
+                      </blockquote>
                   </div>
                 </div>
-                </div>
-                <br>
+              </div>
         </section>
 
+        <section id="services" class="py-3">
+          <div class="container">
+              <h1 class="text-center">Services</h1>
+            <div class="row">
+              <div class="col-sm-12 col-md-1 col-lg-1">
+                  <i class="fa fa-check mx-3" style="width: 100%; color: #d36060"></i>
+              </div>
+              <div class="col-sm-12 col-md-11 col-lg-11">
+                <p class="lead service-text">
+                    The main purpose of this application is to connect the donors and patients directly in an interactive way.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-1 col-lg-1 align-self-center">
+                    <i class="fa fa-check mx-3" style="width: 100%;  color: #d36060"></i>
+                </div>
+                <div class="col-sm-12 col-md-11 col-lg-11">
+                  <p class="lead service-text">
+                      You can either sign up as a donor or as a patient.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12 col-md-1 col-lg-1">
+                      <i class="fa fa-check mx-3" style="width: 100%;  color: #d36060"></i>
+                  </div>
+                  <div class="col-sm-12 col-md-11 col-lg-11">
+                    <p class="lead service-text">
+                        The patient portal gets access to all the available donors, you can search the donors by their blood group and then contact them directly for further details, or you can either register yourself as a donor by providing your required medical information.
+                    </p>
+                  </div>
+                </div>
+          </div>
+        </section>
         <!-- Team section -->
 
         <section id="team">
-          <div class="container mt-5">
+          <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-12 col-sm-5 mt-5 mb-1">
+                <div class="col-lg-4 col-md-12 col-sm-5 mt-4">
                   <h1 class="text-center text-light" style="border-bottom: 1px solid white"> <span style="border-top: 1px solid white;">MEET</span> OUR TEAM</h1>
                 </div>  
             </div>
-            <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-2 profile-outer mt-5 mb-5">
-                <img class="profile-style" width="200px" height="200px" src="./img/soha.jpeg">
-                <p class="ml-5 text-light mt-2">Soha Moosa</p>
-                <p class="text-light ml-3">Full Stack Developer</p>
-               <a href="https://www.linkedin.com/in/soha-m-ba7a27b2/"><i class="fab fa-linkedin-in text-light linkedIn"></i></a>
-               <a href="https://github.com/soha-moosa"><i class="fab fa-github text-light github"></i></a>
-              </div>
-              <div class="col-lg-4 col-md-4 col-sm-2 profile-outer mt-5 mb-5">
-                  <img class="profile-style" width="200px" height="200px" src="./img/rehan.jpeg">
-                <p class="ml-5 text-light mt-2">Rehan Sattar</p>
-                <p class="text-light ml-3">MERN Stack Developer</p>
-                <a href="https://www.linkedin.com/in/rehan-sattar-036299158/"><i class="fab fa-linkedin-in text-light linkedIn"></i></a>
-                <a href="https://github.com/Rehan-Sattar"><i class="fab fa-github text-light github"></i></a>
+            <div class="row justify-content-center mt-2">
+              <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="mb-3 text-center">
+                  <img class="profile-style"  width="200px" height="200px" src="./img/soha.jpeg">
+                  <p class="text-light">Soha Moosa</p>
+                  <p class="text-light">Full Stack Developer</p>
+                 <a href="https://www.linkedin.com/in/soha-m-ba7a27b2/"><i class="fab fa-linkedin-in text-light linkedIn"></i></a>
+                 <a href="https://github.com/soha-moosa"><i class="fab fa-github text-light github"></i></a>  
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-2 profile-outer mt-5 mb-5">
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-12  col-sm-12">
+                <div class="mb-3 text-center">
+                  <img class="profile-style" width="200px" height="200px" src="./img/rehan.jpeg">
+                  <p class="text-light">Rehan Sattar</p>
+                  <p class="text-light">MERN Stack Developer</p>
+                  <a href="https://www.linkedin.com/in/rehan-sattar-036299158/">
+                    <i class="fab fa-linkedin-in text-light linkedIn"></i>
+                  </a>
+                  <a href="https://github.com/Rehan-Sattar">
+                    <i class="fab fa-github text-light github"></i>
+                  </a>
+                </div>  
+              </div>
+                <div class="col-lg-4 col-md-4 col-sm-12  col-sm-12">
+                  <div class="mb-3 text-center"> 
                     <img class="profile-style" width="200px" height="200px" src="./img/neha.jpeg">
-                <p class="ml-5 text-light mt-2">Neha Ejaz</p>
-                <p class="text-light ml-3">Full Stack Developer</p>
-                <a href="https://www.linkedin.com/in/nehaejaz/"><i class="fab fa-linkedin-in text-light linkedIn"></i></a>
-                <a href="https://github.com/nehaejaz"><i class="fab fa-github text-light github"></i></a>
+                    <p class="text-light">Neha Ejaz</p>
+                    <p class="text-light">Full Stack Developer</p>
+                    <a href="https://www.linkedin.com/in/nehaejaz/"><i class="fab fa-linkedin-in text-light linkedIn"></i></a>
+                    <a href="https://github.com/nehaejaz"><i class="fab fa-github text-light github"></i></a>
+                      
                   </div>
+                </div>
             </div>
           </div>
         </section>
