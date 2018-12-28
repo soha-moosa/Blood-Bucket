@@ -114,6 +114,14 @@ textarea:focus {
   font-size: 231%;
 }
 
+.contact-header {
+  border-left: 2px solid #d36060;
+}
+
+.contact-message {
+  margin-left: 3rem;
+}
+
 /***** Media size 321 *****/
 
 @media screen and (min-width: 320px) and (max-width: 400px) {
@@ -155,6 +163,16 @@ textarea:focus {
 
   .text-highlight {
     margin-top: 34%;
+  }
+
+  .contact-header {
+    font-size: 109%;
+    border-left: none;
+    border-top: 2px solid #d36060;
+  }
+
+  .contact-message {
+    margin-left: 0rem !important;
   }
 }
 
@@ -200,6 +218,16 @@ textarea:focus {
   .text-highlight {
     margin-top: 34%;
   }
+
+  .contact-header {
+    font-size: 133%;
+    border-left: none;
+    border-top: 2px solid #d36060;
+  }
+
+  .contact-message {
+    margin-left: 0rem !important;
+  }
 }
 
 /***** Media size 501 *****/
@@ -230,6 +258,11 @@ textarea:focus {
 
   .text-highlight {
     margin-top: 14%;
+  }
+
+  .contact-message {
+    margin-left: 4rem !important;
+    width: 93% !important;
   }
 }
 
@@ -267,6 +300,14 @@ textarea:focus {
     font-size: 84px;
     color: #dc143c;
     font-family: 'Pacifico', cursive !important;
+  }
+  .contact-header {
+    font-size: 133%;
+  }
+
+  .contact-message {
+    width: 82% !important;
+    margin-left: 3rem !important;
   }
 }
 
