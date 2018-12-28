@@ -108,6 +108,7 @@ textarea:focus {
 
 .footer-copyright {
   line-height: 502%;
+  margin-left: 3rem !important;
 }
 
 .drop-footer-icon {
@@ -174,6 +175,14 @@ textarea:focus {
   .contact-message {
     margin-left: 0rem !important;
   }
+
+  .drop-footer-icon {
+    margin-left: 48%;
+  }
+
+  .footer-copyright {
+    margin-left: 1rem !important;
+  }
 }
 
 /***** Media size 401 *****/
@@ -228,6 +237,14 @@ textarea:focus {
   .contact-message {
     margin-left: 0rem !important;
   }
+
+  .footer-copyright {
+    margin-left: 1rem !important;
+  }
+
+  .drop-footer-icon {
+    margin-left: 48%;
+  }
 }
 
 /***** Media size 501 *****/
@@ -263,6 +280,14 @@ textarea:focus {
   .contact-message {
     margin-left: 4rem !important;
     width: 93% !important;
+  }
+
+  .footer-copyright {
+    margin-left: 3rem !important;
+  }
+
+  .drop-footer-icon {
+    margin-left: 48%;
   }
 }
 
@@ -307,6 +332,10 @@ textarea:focus {
 
   .contact-message {
     width: 82% !important;
+    margin-left: 3rem !important;
+  }
+
+  .footer-copyright {
     margin-left: 3rem !important;
   }
 }
