@@ -15,8 +15,8 @@ body {
 }
 
 #loader {
-  height: 300px;
-  width: 300px;
+  height: 270px;
+  width: 270px;
   position: absolute;
   top: 30%;
   left: 40%;
@@ -101,24 +101,6 @@ input:focus,
 textarea:focus {
   outline-color: #dc143c !important;
 }
-
-/*::-webkit-input-placeholder {
-  text-align: center;
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-/* /  text-align: center; */
-
-/*  */
-/* ::-moz-placeholder { */
-/* Firefox 19+ */
-/* text-align: center; */
-/* } */
-
-/* :-ms-input-placeholder { */
-/* text-align: center; */
-/* } */
 
 /***** Media size 321 *****/
 
