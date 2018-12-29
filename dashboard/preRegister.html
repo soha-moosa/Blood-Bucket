@@ -116,13 +116,15 @@
         var op3 = document.getElementById('inlineRadio6').checked //No
         var op4 = document.getElementById('inlineRadio8').checked //No
 
-        if (op1 & op2 & op3 & (op4 === true)) {
+        if (op1 & op2 & op3 & op4 === true) {
             swal({
                 title: 'Congratulations!',
                 text: 'You are eleigible to donate blood and can proceed further',
                 icon: 'success',
                 button: 'Continue Register!'
-            })
+            }).then((value) => {
+                window.location.href = "/dashboard/registerDonor.html"
+            });
         } else {
             swal({
                 title: 'Thank you!',
