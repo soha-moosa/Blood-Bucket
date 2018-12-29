@@ -1,7 +1,6 @@
 const Donor = require('./donor-model.js')
 
 function registerDonor(req, res) {
-  console.log(req.body)
   const newDonor = new Donor(req.body)
   newDonor
     .save()
@@ -19,6 +18,24 @@ function registerDonor(req, res) {
     })
 }
 
+function getAllDonors(req, res) {
+  Donor.find({})
+    .then(donors =>
+      donors.length > 0
+        ? res.send({
+            status: true,
+            totalDonors: donors.length,
+            donors
+          })
+        : res.send({
+            status: false,
+            message: 'no donors'
+          })
+    )
+    .catch(err => res.send({ status: false, err }))
+}
+
 module.exports = {
-  registerDonor
+  registerDonor,
+  getAllDonors
 }
