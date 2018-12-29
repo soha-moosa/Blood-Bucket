@@ -47,15 +47,9 @@
     <title>BLOOD BUCKET</title>
   </head>
 
-  <body onload="loader();">
-    <div>
-      <img
-        src="../img/blood.png"
-        class="loader animated infinite delay-1s fadeInDown fadeOutDown"
-        id="loader"
-      />
-    </div>
-    <div id="body" class="wrapper">
+  <body>
+   
+    <div class="wrapper">
       <!-- navbar -->
 
       <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-light">
@@ -142,13 +136,5 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-      let loader = () => {
-        setTimeout(() => {
-          document.getElementById('loader').style.display = 'none';
-          document.getElementById('body').style.display = 'block';
-        }, 3500);
-      };
-    </script>
   </body>
 </html>
