@@ -6,25 +6,12 @@ body {
   overflow: hidden;
 }
 
-#body {
-  display: none;
-}
-
 .navbar {
   border-bottom: 5px solid #dc143c;
 }
 
 .background-color {
   background-color: #dc143c;
-}
-
-#loader {
-  height: 270px;
-  width: 270px;
-  position: absolute;
-  top: 30%;
-  left: 40%;
-  display: 'block';
 }
 
 .navbar-brand,
@@ -67,15 +54,6 @@ ul.navbar-nav a:hover {
 /***** Media size 321 *****/
 
 @media screen and (min-width: 320px) and (max-width: 400px) {
-  #loader {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    display: 'block';
-  }
-
   .wrapper {
     width: 100%;
     height: 100%;
@@ -89,15 +67,6 @@ ul.navbar-nav a:hover {
 /***** Media size 401 *****/
 
 @media screen and (min-width: 401px) and (max-width: 500px) {
-  #loader {
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    top: 30%;
-    left: 38%;
-    display: 'block';
-  }
-
   .wrapper {
     width: 100%;
     height: 100%;
@@ -111,14 +80,6 @@ ul.navbar-nav a:hover {
 /***** Media size 501 *****/
 
 @media screen and (min-width: 501px) and (max-width: 770px) {
-  #loader {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    top: 30%;
-    left: 38%;
-    display: 'block';
-  }
   .wrapper {
     width: 100%;
     height: 100%;
@@ -132,14 +93,6 @@ ul.navbar-nav a:hover {
 /***** Media size 771 *****/
 
 @media screen and (min-width: 771px) and (max-width: 1050px) {
-  #loader {
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    top: 30%;
-    left: 39%;
-    display: 'block';
-  }
 }
 
 @media screen and (min-width: 1200px) {
