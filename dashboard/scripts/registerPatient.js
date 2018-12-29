@@ -38,6 +38,7 @@ function registerPatient(e) {
   let femaleFlag = document.getElementById('inlineRadio2').checked
   let gender = !maleFlag ? 'male' : 'female'
   const patient = {
+    name,
     email,
     contact,
     age,
@@ -49,7 +50,18 @@ function registerPatient(e) {
   }
   patientRegistration(patient)
     .then(docRef => {
-      console.log('DOC added with the reference of: ', docRef)
+      fetch(`http://localhost:8080/patient/register-patient`, {
+        method: 'POST',
+        body: JSON.stringify({
+          ...patient
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(res => res.json())
+        .then(patient => console.log(patient))
+        .catch(err => console.log(err))
     })
     .catch(err => console.log(err))
 }
