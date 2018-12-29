@@ -1,6 +1,7 @@
 const Donor = require('./donor-model.js')
 
 function registerDonor(req, res) {
+  console.log(req.body)
   const newDonor = new Donor(req.body)
   newDonor
     .save()
