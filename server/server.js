@@ -1,11 +1,13 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const cors = require('cors')
 const donorRoutes = require('./donor/donor-routes')
 const patientRoutes = require('./patient/patient-routes')
 require('./dbConnection.js')
 
 // parsing the request data
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
