@@ -1,0 +1,62 @@
+body{
+    background: url(../img/patient-bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.signupdiv{
+    background: black;
+    opacity: 0.7;
+    /* height: 80px; */
+    padding: 3%;
+    margin-top: -8%;
+    margin-bottom: 8%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #848484;
+}
+.signupheading{
+ color:white;
+ /* margin-top: 12px; */
+ 
+}
+.main-section{
+    
+    margin: 0;
+    margin-top:100px;
+   /*margin-left: 25px; */
+    padding-top: 0px;
+}
+.modal-content{
+    background: rgb(51, 50, 50);
+    opacity: 0.83;
+    padding: 0 18px;
+    box-shadow: 0px 0px 3px #848484;
+}
+.form-group{
+    margin-bottom: 30px;
+}
+.form-group input{
+    height: 45px;
+    font-size: 18px;
+    box-shadow: 0px 0px 3px #848484;
+    padding-left: 14px;
+}
+#btnforsignup{
+    height: 40px;
+    margin: 5px 0px 20px;
+    background: rgb(58, 55, 52);
+    color: white;
+    box-shadow: 0px 0px 3px #848484;
+}
+#btnforsignup:hover,#signup:focus{
+    background-color: rgb(29, 27, 25);
+}
+.user-image{
+    margin-top: -50px;/*for making img out a little from the box*/
+    margin-bottom: 30px ; /*for keeping little spcae between pictue and input fields*/
+}
+.user-image img{ /*setting values for original image*/
+    height: 100px; 
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #848484;/*for shadow efect around the box*/
+}
