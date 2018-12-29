@@ -131,6 +131,18 @@ ul.navbar-nav a:hover {
     left: 38%;
     display: 'block';
   }
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 105px 0 0 0 !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    overflow: hidden !important;
+    display: block;
+    box-sizing: none !important;
+  }
 }
 
 /***** Media size 771 *****/
