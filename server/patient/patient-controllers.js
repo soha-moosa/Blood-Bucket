@@ -18,6 +18,24 @@ function registerPatient(req, res) {
     })
 }
 
+function getAllPatients(req, res) {
+  Patient.find({})
+    .then(patients =>
+      patients.length > 0
+        ? res.send({
+            status: true,
+            totalPatients: patients.length,
+            patients
+          })
+        : res.send({
+            status: false,
+            message: 'no patients'
+          })
+    )
+    .catch(err => res.send({ status: false, err }))
+}
+
 module.exports = {
-  registerPatient
+  registerPatient,
+  getAllPatients
 }
