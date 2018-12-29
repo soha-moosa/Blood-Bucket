@@ -1,0 +1,55 @@
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 5px solid #dc143c;
+  border-left: 5px solid #dc143c;
+  border-right: 5px solid #dc143c;
+  overflow: hidden;
+  display: block;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+#body {
+  display: none;
+}
+
+.navbar {
+  border-bottom: 10px solid #dc143c;
+}
+
+.background-color {
+  background-color: #dc143c;
+}
+
+#loader {
+  height: 270px;
+  width: 270px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  display: 'block';
+}
+
+.navbar-brand,
+.nav-link {
+  font-family: 'Ubuntu Condensed', sans-serif !important;
+}
+
+ul.navbar-nav a:hover {
+  color: #dc143c !important;
+}
+
+.blood-color {
+  color: #dc143c;
+}
