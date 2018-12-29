@@ -52,3 +52,8 @@ ul.navbar-nav a:hover {
 .blood-color {
   color: #dc143c;
 }
+
+.input-border {
+  border-radius: 10px !important;
+  padding: 3px;
+}
