@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#">Blood Bucket</a>
       <button
         class="navbar-toggler"
@@ -37,10 +37,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Disabled</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
         </ul>
       </div>
     </nav>
@@ -49,39 +46,49 @@
       <h3 style="font-family: 'Raleway', sans-serif;">Use Blood Bucket As?</h3>
     </div>
     <div class="container center" style="margin-top:2%;width: 100%">
-      <div class="card shadow m-2" style="height:80%; width:50%">
-        <img
-          class="card-img-top m-auto"
-          src="../img/donor.png"
-          alt="Card image cap"
-          style="height:30%; width:30%"
-        />
-        <div class="card-block">
-          <h4 class="card-title p-2">As a Donor</h4>
-          <p class="card-text p-2">
-            Register your self as a blood donor to save the lives in need
-          </p>
-          <div class="container center">
-            <button type="button" class="btn btn-danger m-2">
-              <a href="preRegister.html" style="color:white;">Donor</a>
-            </button>
+      <div class="row">
+        <div class="col-m-6 col-lg-6 col-sm-12 mt-2">
+          <div class="card shadow">
+            <img
+              class="card-img-top m-auto pt-2"
+              src="../img/donor.png"
+              alt="Card image cap"
+              style="height:30%; width:30%"
+            />
+            <div class="card-body text-center">
+              <h4 class="card-title">As a Donor</h4>
+              <p class="card-text">
+                Register your self as a blood donor to save the lives in need
+              </p>
+              <div class="container center">
+                <a
+                  href="./preRegister.html"
+                  class="btn btn-danger btn-block text-white btn-anchr"
+                >
+                  Donor
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card shadow m-2" style="height:80%; width:50%">
-        <img
-          class="card-img-top m-auto"
-          src="../img/patient.png"
-          alt="Card image cap"
-          style="height:30%;width:30%"
-        />
-        <div class="card-block">
-          <h4 class="card-title p-2">As a Patient</h4>
-          <p class="card-text p-2">
-            Find donors for your required blood groups in just a tap away
-          </p>
-          <div class="container center">
-            <button type="button" class="btn btn-danger m-2">Patient</button>
+        <div class="col-md-6 col-lg-6 col-sm-12 mt-2">
+          <div class="card shadow style="height:80%; width:50%">
+          <img
+            class="card-img-top m-auto  pt-2"
+            src="../img/patient.png"
+            alt="Card image cap"
+            style="height:30%;width:30%"
+          />
+          <div class="card-body text-center">
+            <h4 class="card-title">As a Patient</h4>
+            <p class="card-text">
+              Find donors for your required blood groups in just a tap away
+            </p>
+            <div class="container center">
+              <button type="button" class="btn btn-danger btn-block">
+                Patient
+              </button>
+            </div>
           </div>
         </div>
       </div>
