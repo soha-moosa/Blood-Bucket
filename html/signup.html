@@ -44,6 +44,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
     />
+  
+    <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+
     <title>BLOOD BUCKET</title>
   </head>
 
@@ -100,12 +104,12 @@
                           <div class="card-body">
                             <h1 class="text-center blood-color">SIGN UP</h1>
                             <p class="text-muted text-center">You don't have to be a doctor to save lives.</p>
-                            <form>
+                            <form id="signupForm">
                                 <div class="row justify-content-center">
                                 <div class="col-lg-8 col-md-12 col-sm-5">
-                                    <input type="text" class="fa input-border form-control" placeholder="&nbsp; &#xf007 &nbsp; Email" /> 
-                                    <input type="text" class="fa mt-2 input-border form-control" placeholder="&nbsp; &#xf13e &nbsp; Password" />
-                                    <button class="btn btn-block mt-2 input-border background-color text-white">SIGN UP</button>
+                                    <input type="email" id="email" class="fa input-border form-control" placeholder="&nbsp; &#xf007 &nbsp; Email" /> 
+                                    <input type="password" id="password" class="fa mt-2 input-border form-control" placeholder="&nbsp; &#xf13e &nbsp; Password" />
+                                    <button type="submit" class="btn btn-block mt-2 input-border background-color text-white">SIGN UP</button>
                                     </div>
                                 </div>
                         </form>   
@@ -136,5 +140,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/signup.js"></script>
   </body>
 </html>
