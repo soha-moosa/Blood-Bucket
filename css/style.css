@@ -14,6 +14,10 @@ body {
   border-bottom: 3px solid #dc143c;
 }
 
+.background-color {
+  background-color: #dc143c;
+}
+
 #loader {
   height: 270px;
   width: 270px;
@@ -102,6 +106,23 @@ textarea:focus {
   outline-color: #dc143c !important;
 }
 
+.footer-copyright {
+  line-height: 502%;
+  margin-left: 3rem !important;
+}
+
+.drop-footer-icon {
+  font-size: 231%;
+}
+
+.contact-header {
+  border-left: 2px solid #d36060;
+}
+
+.contact-message {
+  margin-left: 3rem;
+}
+
 /***** Media size 321 *****/
 
 @media screen and (min-width: 320px) and (max-width: 400px) {
@@ -143,6 +164,24 @@ textarea:focus {
 
   .text-highlight {
     margin-top: 34%;
+  }
+
+  .contact-header {
+    font-size: 109%;
+    border-left: none;
+    border-top: 2px solid #d36060;
+  }
+
+  .contact-message {
+    margin-left: 0rem !important;
+  }
+
+  .drop-footer-icon {
+    margin-left: 48%;
+  }
+
+  .footer-copyright {
+    margin-left: 1rem !important;
   }
 }
 
@@ -188,6 +227,24 @@ textarea:focus {
   .text-highlight {
     margin-top: 34%;
   }
+
+  .contact-header {
+    font-size: 133%;
+    border-left: none;
+    border-top: 2px solid #d36060;
+  }
+
+  .contact-message {
+    margin-left: 0rem !important;
+  }
+
+  .footer-copyright {
+    margin-left: 1rem !important;
+  }
+
+  .drop-footer-icon {
+    margin-left: 48%;
+  }
 }
 
 /***** Media size 501 *****/
@@ -218,6 +275,19 @@ textarea:focus {
 
   .text-highlight {
     margin-top: 14%;
+  }
+
+  .contact-message {
+    margin-left: 4rem !important;
+    width: 93% !important;
+  }
+
+  .footer-copyright {
+    margin-left: 3rem !important;
+  }
+
+  .drop-footer-icon {
+    margin-left: 48%;
   }
 }
 
@@ -255,6 +325,18 @@ textarea:focus {
     font-size: 84px;
     color: #dc143c;
     font-family: 'Pacifico', cursive !important;
+  }
+  .contact-header {
+    font-size: 133%;
+  }
+
+  .contact-message {
+    width: 82% !important;
+    margin-left: 3rem !important;
+  }
+
+  .footer-copyright {
+    margin-left: 3rem !important;
   }
 }
 
