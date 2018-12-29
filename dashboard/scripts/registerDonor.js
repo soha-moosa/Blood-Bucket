@@ -29,7 +29,7 @@ function registerDonor(e) {
   let bloodGroup = document.getElementById('bloodtype').value
   let city = document.getElementById('city').value
   let address = document.getElementById('address').value
-
+  let postalCode = document.getElementById('postalcode').value
   // getting the radio buttons
   let maleFlag = document.getElementById('inlineRadio1').checked
   let femaleFlag = document.getElementById('inlineRadio2').checked
@@ -43,11 +43,25 @@ function registerDonor(e) {
     bloodGroup,
     city,
     gender,
-    address
+    address,
+    postalCode
   }
   donorRegistration(donor)
     .then(docRef => {
+      // mongo Request generation here ..
       console.log('Document added with the reference of: ', docRef)
+      fetch('http://localhost:8080/donor/register-donor', {
+        method: 'POST',
+        body: JSON.stringify({
+          ...donor
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(res => res.json())
+        .then(donor => console.log(donor))
+        .catch(err => console.log(donor))
     })
     .catch(err => {
       console.log('err', err)

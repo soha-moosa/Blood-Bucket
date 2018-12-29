@@ -11,7 +11,7 @@ const donorSchema = new Schema({
   postalCode: String,
   age: Number,
   bloodGroup: String,
-  contactNumber: String
+  contact: String
 })
 
 module.exports = new mongoose.model('Donor', donorSchema)
