@@ -62,6 +62,10 @@ ul.navbar-nav a:hover {
     overflow: hidden !important;
     display: block;
   }
+
+  .admin-font {
+    font-size: 139%;
+  }
 }
 
 /***** Media size 401 *****/
@@ -74,6 +78,10 @@ ul.navbar-nav a:hover {
     padding: 0 !important;
     overflow: hidden !important;
     display: block;
+  }
+
+  .admin-font {
+    font-size: 224%;
   }
 }
 
@@ -88,11 +96,17 @@ ul.navbar-nav a:hover {
     overflow: hidden !important;
     display: block;
   }
+  .admin-font {
+    font-size: 139%;
+  }
 }
 
 /***** Media size 771 *****/
 
 @media screen and (min-width: 771px) and (max-width: 1050px) {
+  .admin-font {
+    font-size: 224%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
