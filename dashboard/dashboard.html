@@ -29,9 +29,9 @@
         projectId: 'blood-bucket',
         storageBucket: 'blood-bucket.appspot.com',
         messagingSenderId: '629147239690'
-      };
+      }
 
-      var firebase = firebase.initializeApp(config);
+      var firebase = firebase.initializeApp(config)
     </script>
     <title>dashboard</title>
   </head>
@@ -102,9 +102,9 @@
               Find donors for your required blood groups in just a tap away
             </p>
             <div class="container center">
-              <button type="button" class="btn btn-danger btn-block">
+              <a href="./registerPatient.html" class="btn btn-danger btn-block">
                 Patient
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -126,21 +126,21 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      document.getElementById('logoutBtn').addEventListener('click', logout);
+      document.getElementById('logoutBtn').addEventListener('click', logout)
 
       function logout() {
         firebase
           .auth()
           .signOut()
           .then(() => localStorage.removeItem('User'))
-          .catch(error => console.log(error));
+          .catch(error => console.log(error))
       }
 
       firebase.auth().onAuthStateChanged(user => {
         if (!user) {
-          window.location.href = '../html/login.html';
+          window.location.href = '../html/login.html'
         }
-      });
+      })
     </script>
   </body>
 </html>
