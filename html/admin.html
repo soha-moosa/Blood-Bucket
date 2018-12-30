@@ -101,12 +101,12 @@
                   <p class="text-muted text-center">
                         Welcome Sir/Mam please Login with your mac address here.
                   </p>
-                  <form>
+                  <form id="adminForm">
                         <div class="row justify-content-center">
                         <div class="col-lg-8 col-md-12 col-sm-5">
-                            <input type="text" class="fa input-border form-control" placeholder="&nbsp; &#xf007 &nbsp; Email" /> 
-                            <input type="text" class="fa mt-2 input-border form-control" placeholder="&nbsp; &#xf13e &nbsp; Mac Address" />
-                            <button class="btn btn-block mt-2 input-border background-color text-white">LOGIN</button>
+                            <input type="email" id="email" class="fa input-border form-control" placeholder="&nbsp; &#xf007 &nbsp; Email" /> 
+                            <input type="password" id="macAddress" class="fa mt-2 input-border form-control" placeholder="&nbsp; &#xf13e &nbsp; Mac Address" />
+                            <button type="submit" class="btn btn-block mt-2 input-border background-color text-white">LOGIN</button>
                             </div>
                         </div>
                 </form>
@@ -138,5 +138,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/admin.js"></script>
   </body>
 </html>

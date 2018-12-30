@@ -23,6 +23,7 @@
     "express": "^4.16.4",
     "getmac": "^1.4.6",
     "ip": "^1.1.5",
+    "jsonwebtoken": "^8.4.0",
     "mocha": "^5.2.0",
     "mongoose": "^5.4.1"
   }

@@ -12,21 +12,21 @@ var firebase = firebase.initializeApp(config);
 
 // ===== Event Listeners ===== //
 
-document.getElementById('loginForm').addEventListener('submit', login);
+document.getElementById('signupForm').addEventListener('submit', signup);
 
 // ===== Functions ===== //
 
-// Login
+// Signup
 
 let auth = firebase.auth();
 
-function login(event) {
+function signup(event) {
   event.preventDefault();
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
 
   auth
-    .signInWithEmailAndPassword(email, password)
+    .createUserWithEmailAndPassword(email, password)
     .then(data => localStorage.setItem('User', JSON.stringify(data.user)))
     .catch(error => console.log(error));
 }
@@ -35,6 +35,6 @@ auth.onAuthStateChanged(user => {
   if (user) {
     window.location.href = '../dashboard/dashboard.html';
   } else {
-    console.log('Invalid email or password');
+    console.log('Login first');
   }
 });
