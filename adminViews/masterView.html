@@ -13,6 +13,11 @@
     />
     <!-- css stylesheet -->
     <link rel="stylesheet" type="text/css" href="../css/dashborad.css" />
+    <style>
+      #donor-table-body {
+        display: none;
+      }
+    </style>
     <title>DonorsList</title>
   </head>
 
@@ -48,10 +53,14 @@
 
       <div class="row justify-content-center">
         <div class="col-md-4 col-sm-12 col-lg-4 mt-2">
-          <button class="btn btn-danger btn-lg btn-block">Show Patiens</button>
+          <button class="btn btn-danger btn-lg btn-block" id="patient-list-btn">
+            Show Patiens
+          </button>
         </div>
         <div class="col-md-4 col-sm-12 col-lg-4 mt-2">
-          <button class="btn btn-danger btn-lg btn-block">Show Donors</button>
+          <button class="btn btn-danger btn-lg btn-block" id="donor-list-btn">
+            Show Donors
+          </button>
         </div>
       </div>
       <br />
@@ -70,6 +79,7 @@
           </tr>
         </thead>
         <tbody id="patient-table-body"></tbody>
+        <tbody id="donor-table-body"></tbody>
       </table>
     </div>
   </body>
