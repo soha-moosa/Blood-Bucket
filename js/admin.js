@@ -17,7 +17,7 @@ function admin(event) {
   let masterAdmin = 'rehansattar117@gmail.com';
 
   let patientAdminMacAddress = 'soha12345';
-  let donorAdminMacAddress = 'neha12345';
+  let donorAdminMacAddress = 'neha12345'; 
   let masterAdminMacAddress = 'rehan12345';
 
   if (email === masterAdmin && macAddress === masterAdminMacAddress) {
