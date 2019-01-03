@@ -15,6 +15,4 @@ var db = app.firestore()
 db.settings({
   timestampsInSnapshots: true
 })
-
-console.log('connected to firbase with the object => ', db)
 module.exports = db

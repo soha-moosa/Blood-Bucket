@@ -59,21 +59,30 @@ function getAllDonors(req, res) {
 }
 
 function deleteDonor(req, res) {
-  const id = req.params.id
-
-  Donor.findByIdAndRemove(id).then(deletedDonor =>
-    res
-      .send({
-        status: true,
-        deletedDonor
-      })
-      .catch(err =>
-        res.send({
-          status: false,
-          err
-        })
+  const id = req.params.mongo_id
+  const fb_id = req.params.fb_id
+  firestore
+    .collection('users')
+    .doc('AVidr3nHFsgDWxudc24C')
+    .collection('donors')
+    .doc(fb_id)
+    .delete()
+    .then(() => {
+      Donor.findByIdAndRemove(id).then(deletedDonor =>
+        res
+          .send({
+            status: true,
+            deletedDonor
+          })
+          .catch(err =>
+            res.send({
+              status: false,
+              err
+            })
+          )
       )
-  )
+    })
+    .catch(err => res.send(err))
 }
 module.exports = {
   registerDonor,

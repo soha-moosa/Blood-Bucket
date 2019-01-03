@@ -7,6 +7,6 @@ router.get(
   deletePreviouseDocumentsOfDonors,
   controller.getAllDonors
 )
-router.delete('/delte-donor/:id', controller.deleteDonor)
+router.delete('/delte-donor/:mongo_id/:fb_id', controller.deleteDonor)
 
 module.exports = router
