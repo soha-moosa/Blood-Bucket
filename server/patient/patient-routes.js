@@ -7,5 +7,5 @@ router.get(
   deletePreviouseDocumentsOfPatients,
   controller.getAllPatients
 )
-router.delete('/delete-patient/:id', controller.deletePatient)
+router.delete('/delete-patient/:id/:fb_id', controller.deletePatient)
 module.exports = router

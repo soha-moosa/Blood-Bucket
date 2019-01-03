@@ -59,15 +59,29 @@ function getAllPatients(req, res) {
 }
 
 function deletePatient(req, res) {
-  const id = req.params.id
-
-  Patient.findByIdAndDelete(id)
-    .then(deletedPatient =>
-      res.send({
-        stauts: true,
-        deletedPatient
-      })
-    )
+  const id = req.params.mongo_id
+  const fb_id = req.params.fb_id
+  firestore
+    .collection('users')
+    .doc('AVidr3nHFsgDWxudc24C')
+    .collection('patients')
+    .doc(fb_id)
+    .delete()
+    .then(() => {
+      Patient.findByIdAndDelete(id, { new: true })
+        .then(deletedPatient =>
+          res.send({
+            stauts: true,
+            deletedPatient
+          })
+        )
+        .catch(err =>
+          res.send({
+            status: false,
+            err
+          })
+        )
+    })
     .catch(err =>
       res.send({
         status: false,
