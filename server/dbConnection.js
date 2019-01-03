@@ -10,3 +10,5 @@ const db = mongoose.connection
 db.on('connected', function() {
   console.log('Connected successfully!')
 })
+
+module.exports = db
