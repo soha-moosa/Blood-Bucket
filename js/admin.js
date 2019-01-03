@@ -16,9 +16,15 @@ function admin(event) {
   let donorAdmin = 'nehaejaz29@gmail.com'
   let masterAdmin = 'rehansattar117@gmail.com'
 
+<<<<<<< HEAD
   let patientAdminMacAddress = 'soha12345'
   let donorAdminMacAddress = 'neha12345'
   let masterAdminMacAddress = 'rehan12345'
+=======
+  let patientAdminMacAddress = 'soha12345';
+  let donorAdminMacAddress = 'neha12345'; 
+  let masterAdminMacAddress = 'rehan12345';
+>>>>>>> d961c444af6a46e4a3988454efcce21e3d27cef4
 
   if (email === masterAdmin && macAddress === masterAdminMacAddress) {
     window.location.href = '../adminViews/masterView.html'

@@ -1,249 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway"
-      rel="stylesheet"
-    />
-    <!-- css stylesheets -->
-    <link rel="stylesheet" href="../css/registerDonor.css" />
-    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 
-    <title>Register as Donor</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+  <!-- css stylesheets -->
+  <link rel="stylesheet" href="../css/registerDonor.css" />
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <a class="navbar-brand" style="color:white" href="#">Blood Bucket</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" style="color:white" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:white" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:white" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:white" href="#">Disabled</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <title>Register as Donor</title>
+</head>
 
-    <div class="modal-dialog text-center">
-      <div class="col-sm-12 main-section">
-        <div class="modal-content">
-          <div class="col-12 signupdiv">
-            <h1 class="signupheading">Be a Donor!</h1>
-          </div>
-          <!-- <div class="col-12 user-image">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand" style="color:white" href="#">Blood Bucket</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="logoutBtn" style="color:white;" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="modal-dialog text-center">
+    <div class="col-sm-12 main-section">
+      <div class="modal-content">
+        <div class="col-12 signupdiv">
+          <h1 class="signupheading">Be a Donor!</h1>
+        </div>
+        <!-- <div class="col-12 user-image">
                         <img src="../img/usericon.jpg" alt="userface">
                 </div> -->
-          <form class="col-12" id="donorForm">
-            <!-- input for first name -->
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="First Name"
-                name="firstName"
-                id="firstName"
-                required
-              />
+        <form class="col-12" id="donorForm">
+          <!-- input for first name -->
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="First Name" name="firstName" id="firstName" required />
+          </div>
+          <!-- input for last name -->
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Last name" name="lastName" id="lastName" required />
+          </div>
+          <!-- input for email -->
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Enter a valid email ID" name="email" id="email"
+              required />
+          </div>
+          <!-- input for gender -->
+          <div class="container">
+            <p style="margin-right:100%; color:white;">Gender</p>
+            <div class="form-check form-check-inline" style="margin-right:100%;">
+              <input required class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="female" />
+              <label style="color:white;" class="form-check-label" for="inlineRadio1">Female</label>
             </div>
-            <!-- input for last name -->
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Last name"
-                name="lastName"
-                id="lastName"
-                required
-              />
+            <div class="form-check form-check-inline" style="margin-right:100%; margin-bottom: 3%;">
+              <input required class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="male" />
+              <label style="color:white;" class="form-check-label" for="inlineRadio2">Male</label>
             </div>
-            <!-- input for email -->
-            <div class="form-group">
-              <input
-                type="email"
-                class="form-control"
-                placeholder="Enter a valid email ID"
-                name="email"
-                id="email"
-                required
-              />
-            </div>
-            <!-- input for gender -->
-            <div class="container">
-              <p style="margin-right:100%; color:white;">Gender</p>
-              <div
-                class="form-check form-check-inline"
-                style="margin-right:100%;"
-              >
-                <input
-                  required
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio1"
-                  value="female"
-                />
-                <label
-                  style="color:white;"
-                  class="form-check-label"
-                  for="inlineRadio1"
-                  >Female</label
-                >
-              </div>
-              <div
-                class="form-check form-check-inline"
-                style="margin-right:100%; margin-bottom: 3%;"
-              >
-                <input
-                  required
-                  class="form-check-input"
-                  type="radio"
-                  name="inlineRadioOptions"
-                  id="inlineRadio2"
-                  value="male"
-                />
-                <label
-                  style="color:white;"
-                  class="form-check-label"
-                  for="inlineRadio2"
-                  >Male</label
-                >
-              </div>
-            </div>
-            <!-- input for contact -->
-            <div class="form-group">
-              <span></span>
-              <input
-                type="tel"
-                minlength="11"
-                maxlength="14"
-                placeholder="Enter Cell number"
-                class="form-control"
-                name="cellnum"
-                id="cellnum"
-                required
-              />
-            </div>
-            <!-- input for age -->
-            <div class="form-group">
-              <input
-                type="number"
-                class="form-control"
-                placeholder="Age"
-                id="age"
-                name="age"
-                required
-              />
-            </div>
-            <!-- input for blood type -->
-            <div class="form-group col-md-12">
-              <label style="color:white" for="bloodtype">Blood Type</label>
-              <select id="bloodtype" class="form-control">
-                <option value="a-">A-</option>
-                <option value="a+">A+</option>
-                <option value="b-">B-</option>
-                <option value="b+">B+</option>
-                <option value="ab-">AB-</option>
-                <option value="ab+">AB+</option>
-                <option value="o-">O-</option>
-                <option value="o+">O+</option>
-              </select>
-            </div>
-            <!-- input for city -->
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="City"
-                id="city"
-                name="city"
-                required
-              />
-            </div>
-            <!-- input for address -->
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Address"
-                id="address"
-                name="address"
-                required
-              />
-            </div>
-            <!-- input for postal Code -->
-            <div class="form-group">
-              <input
-                type="text"
-                placeholder="Enter Postal Code"
-                class="form-control"
-                name="postalcode"
-                id="postalcode"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              class="btn"
-              name="submit"
-              value="submit"
-              id="btnforsignup"
-            >
-              <i class="fas fa-sign-in-alt"></i>Register!
-            </button>
-          </form>
-        </div>
+          </div>
+          <!-- input for contact -->
+          <div class="form-group">
+            <span></span>
+            <input type="tel" minlength="11" maxlength="14" placeholder="Enter Cell number" class="form-control" name="cellnum"
+              id="cellnum" required />
+          </div>
+          <!-- input for age -->
+          <div class="form-group">
+            <input type="number" class="form-control" placeholder="Age" id="age" name="age" required />
+          </div>
+          <!-- input for blood type -->
+          <div class="form-group col-md-12">
+            <label style="color:white" for="bloodtype">Blood Type</label>
+            <select id="bloodtype" class="form-control">
+              <option value="a-">A-</option>
+              <option value="a+">A+</option>
+              <option value="b-">B-</option>
+              <option value="b+">B+</option>
+              <option value="ab-">AB-</option>
+              <option value="ab+">AB+</option>
+              <option value="o-">O-</option>
+              <option value="o+">O+</option>
+            </select>
+          </div>
+          <!-- input for city -->
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="City" id="city" name="city" required />
+          </div>
+          <!-- input for address -->
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Address" id="address" name="address" required />
+          </div>
+          <!-- input for postal Code -->
+          <div class="form-group">
+            <input type="text" placeholder="Enter Postal Code" class="form-control" name="postalcode" id="postalcode"
+              required />
+          </div>
+          <button type="submit" class="btn" name="submit" value="submit" id="btnforsignup">
+            <i class="fas fa-sign-in-alt"></i>Register!
+          </button>
+        </form>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
 <script src="./scripts/registerDonor.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-  crossorigin="anonymous"
-></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>
+<script>
+  // code for logout
+  document.getElementById('logoutBtn').addEventListener('click', logout);
+
+  function logout() {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => localStorage.removeItem('User'))
+      .catch(error => console.log(error));
+  }
+
+  firebase.auth().onAuthStateChanged(user => {
+    if (!user) {
+      window.location.href = '../html/login.html';
+    }
+  });
+</script>
