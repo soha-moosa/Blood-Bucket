@@ -34,8 +34,25 @@ function getAllPatients(req, res) {
     )
     .catch(err => res.send({ status: false, err }))
 }
+function deletePatient(req, res) {
+  const id = req.params.id
 
+  Patient.findByIdAndDelete(id)
+    .then(deletedPatient =>
+      res.send({
+        stauts: true,
+        deletedPatient
+      })
+    )
+    .catch(err =>
+      res.send({
+        status: false,
+        err
+      })
+    )
+}
 module.exports = {
   registerPatient,
-  getAllPatients
+  getAllPatients,
+  deletePatient
 }
