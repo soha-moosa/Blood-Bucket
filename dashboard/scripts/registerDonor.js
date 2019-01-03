@@ -1,5 +1,3 @@
-console.log('Register Donor Running!')
-
 // Initialize Firebase
 var config = {
   apiKey: 'AIzaSyCTDknW5W5NVTs0necuGBmCNFzQkzDpR0w',
@@ -47,25 +45,6 @@ function registerDonor(e) {
     postalCode
   }
   donorRegistration(donor)
-    .then(docRef => {
-      // mongo Request generation here ..
-      console.log('Document added with the reference of: ', docRef)
-      fetch('http://localhost:8080/donor/register-donor', {
-        method: 'POST',
-        body: JSON.stringify({
-          ...donor
-        }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then(res => res.json())
-        .then(donor => console.log(donor))
-        .catch(err => console.log(donor))
-    })
-    .catch(err => {
-      console.log('err', err)
-    })
 }
 
 function donorRegistration(donor) {
@@ -76,3 +55,25 @@ function donorRegistration(donor) {
     .collection('donors')
     .add(donor)
 }
+
+db.collection('users')
+  .doc('AVidr3nHFsgDWxudc24C')
+  .collection('donors')
+  .onSnapshot(function(snapshot) {
+    snapshot.docChanges().forEach(function(change) {
+      if (change.type === 'added') {
+        fetch('http://localhost:8080/donor/register-donor', {
+          method: 'POST',
+          body: JSON.stringify({
+            ...change.doc.data()
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+          .then(res => res.json())
+          .then(donor => console.log(donor))
+          .catch(err => console.log(donor))
+      }
+    })
+  })
