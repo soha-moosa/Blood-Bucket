@@ -49,20 +49,7 @@ function registerPatient(e) {
     address
   }
   patientRegistration(patient)
-    .then(docRef => {
-      fetch(`http://localhost:8080/patient/register-patient`, {
-        method: 'POST',
-        body: JSON.stringify({
-          ...patient
-        }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then(res => res.json())
-        .then(patient => console.log(patient))
-        .catch(err => console.log(err))
-    })
+    .then(docRef => {})
     .catch(err => console.log(err))
 }
 function patientRegistration(patient) {
@@ -73,3 +60,27 @@ function patientRegistration(patient) {
     .collection('patients')
     .add(patient)
 }
+
+db.collection('users')
+  .doc('AVidr3nHFsgDWxudc24C')
+  .collection('patients')
+  .onSnapshot(function(snapshot) {
+    snapshot.docChanges().forEach(function(change) {
+      if (change.type === 'added') {
+        fetch(`http://localhost:8080/patient/register-patient`, {
+          method: 'POST',
+          body: JSON.stringify({
+            ...change.doc.data()
+          }),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+          .then(res => res.json())
+          .then(patient => console.log(patient))
+          .catch(err => console.log(err))
+      }
+    })
+    //   }
+    // })
+  })
