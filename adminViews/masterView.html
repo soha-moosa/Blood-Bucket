@@ -18,7 +18,7 @@
         display: none;
       }
     </style>
-    <title>DonorsList</title>
+    <title>master</title>
   </head>
 
   <body onload="fetchData()">
@@ -67,7 +67,7 @@
       <hr />
       <br />
 
-      <h1 class="text-center">All Patients</h1>
+      <h1 class="text-center">All Record</h1>
       <hr />
       <table class="table">
         <thead>
@@ -102,12 +102,12 @@
 ></script>
 <script>
   // ===== Event Listener ===== //
-  document.getElementById('logoutBtn').addEventListener('click', logout);
+  document.getElementById('logoutBtn').addEventListener('click', logout)
 
   // ===== Function ===== //
 
   function logout() {
-    localStorage.removeItem('MasterAdmin');
-    window.location.href = '../html/admin.html';
+    localStorage.removeItem('MasterAdmin')
+    window.location.href = '../html/admin.html'
   }
 </script>
