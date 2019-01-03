@@ -35,7 +35,25 @@ function getAllDonors(req, res) {
     .catch(err => res.send({ status: false, err }))
 }
 
+function deleteDonor(req, res) {
+  const id = req.params.id
+
+  Donor.findByIdAndRemove(id).then(deletedDonor =>
+    res
+      .send({
+        status: true,
+        deletedDonor
+      })
+      .catch(err =>
+        res.send({
+          status: false,
+          err
+        })
+      )
+  )
+}
 module.exports = {
   registerDonor,
-  getAllDonors
+  getAllDonors,
+  deleteDonor
 }
